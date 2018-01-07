@@ -15,3 +15,29 @@ One who wants to develop a online comilation/judge system(web application) using
 * commons-logging-1.1.3-api
 # How it works?
 We have to register in Hackerrank.com & also register in Hackerrank API as a client. We will get our "api_key". We have to provide "source" as string and "testcases" as JSON(Javascript object notation) format string. We have to know the corresponding language code "lang". These four arguments are "MUST" for our HTTP post request. We have to create a client connection with "url". A successful request will return us a HTTP response. Then we have to retrieve our desiered JSON format information from this response. This JSON objct wil be like:
+
+```
+{
+    "result":
+    {
+        "callback_url":"",
+        "censored_compile_message":"",
+        "codechecker_hash":"run-zn5OjyHm3z698HTR0Oeg",
+        "compile_command":"python -mpy_compile  solution.py 1> compile.err 2>&1",
+        "compilemessage":"",
+        "error_code":0,
+        "hash":"1515352927-202009908",
+        "loopback":null,
+        "memory":[7294976],
+        "message":["Success"],
+        "response_s3_path":"2018_01_07_19\/gHy0edrouFEZzlx2RmNDtOWa4MQs7VKLj9fIU1pTnJYBAkvhS85a52735f719262.48271893",
+        "result":0,
+        "run_command":"",
+        "server":"ip-10-10-87-153",
+        "signal":[0],
+        "stderr":[false],
+        "stdout":["The name of our country is Bangladesh.\n"],
+        "time":[0]
+    }
+}
+```
