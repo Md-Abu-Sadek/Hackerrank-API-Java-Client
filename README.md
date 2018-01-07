@@ -9,9 +9,9 @@ One who wants to develop a online comilation/judge system(web application) using
 # Language:
 JAVA 8
 # Dependencies:
-httpclient-4.5.2
-httpcore-4.4.8
-org.json
-commons-logging-1.1.3-api
+* httpclient-4.5.2
+* httpcore-4.4.8
+*org.json
+* commons-logging-1.1.3-api
 # How it works?
-We have to register in Hackerrank.com & also register in Hackerrank API as a client. We will get our "api_key". We have to provide "source" as string and "testcases" as JSON(Javascript object notation) format string. We have to know the corresponding language code "lang". These four arguments are "MUST" for our HTTP post request. We have to create a client connection with "http://api.hackerrank.com/checker/submission.json"(url). A successful request will return us a HTTP response. Then we have to retrieve our desiered JSON format information from this response. This JSON objct wil be like:
+We have to register in Hackerrank.com & also register in Hackerrank API as a client. We will get our "api_key". We have to provide "source" as string and "testcases" as JSON(Javascript object notation) format string. We have to know the corresponding language code "lang". These four arguments are "MUST" for our HTTP post request. We have to create a client connection with "url". A successful request will return us a HTTP response. Then we have to retrieve our desiered JSON format information from this response. This JSON objct wil be like:
